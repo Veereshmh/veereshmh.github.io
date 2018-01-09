@@ -1,0 +1,30 @@
+{
+    "schema": "https://veerhiremath7.github.io/sample.json",
+    "title": "My Details",
+    "description": "This is my details page",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a product",
+            "type": "integer"
+        },
+        "name": {
+            "description": "Name of the product",
+            "type": "string"
+        },
+        "price": {
+            "type": "number",
+            "exclusiveMinimum": 0
+        },
+        "tags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    },
+    "required": ["id", "name", "price"]
+}
+
